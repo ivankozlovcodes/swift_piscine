@@ -25,6 +25,8 @@ class TodoListViewControllerTableViewController: UITableViewController {
         item3.text = "Chill"
         item3.isImportant = false
         todoList = [item1, item2, item3]
+
+//        tableCell.textLabel?.lineBreakMode = .byWordWrapping
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +36,9 @@ class TodoListViewControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping;
+
         let todoItem = todoList[indexPath.row]
         let importance = todoItem.isImportant ? "☝️" : ""
         cell.textLabel?.text = importance + " " + todoItem.text
