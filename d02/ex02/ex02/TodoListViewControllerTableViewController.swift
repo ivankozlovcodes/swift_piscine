@@ -25,8 +25,6 @@ class TodoListViewControllerTableViewController: UITableViewController {
         item3.text = "Chill"
         item3.isImportant = false
         todoList = [item1, item2, item3]
-
-//        tableCell.textLabel?.lineBreakMode = .byWordWrapping
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
