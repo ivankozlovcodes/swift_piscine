@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:ex00.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/nfs/2017/i/ikozlov/projects/swift_piscine/d07/ex00/Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
