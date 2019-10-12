@@ -10,4 +10,7 @@ target 'ex00' do
   # Pods for ex00
   pod 'Firebase/Core', '~> 5'
   pod 'Firebase/Functions'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		094C02A5D7CFD91F8A236E5D /* Pods_ex00.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83D9055F6BE5039F4D31943 /* Pods_ex00.framework */; };
+		140BB54F23514AD2000738CC /* MessagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140BB54E23514AD2000738CC /* MessagesCollectionViewController.swift */; };
+		140BB55723515016000738CC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140BB55623515016000738CC /* Message.swift */; };
+		140BB55923515163000738CC /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140BB55823515163000738CC /* MessageCollectionViewCell.swift */; };
 		141B18CF23508A2800025D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B18CE23508A2800025D0F /* AppDelegate.swift */; };
-		141B18D123508A2900025D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141B18D023508A2900025D0F /* ViewController.swift */; };
 		141B18D423508A2900025D0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141B18D223508A2900025D0F /* Main.storyboard */; };
 		141B18D623508A2A00025D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141B18D523508A2A00025D0F /* Assets.xcassets */; };
 		141B18D923508A2A00025D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141B18D723508A2A00025D0F /* LaunchScreen.storyboard */; };
@@ -17,9 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		140BB54E23514AD2000738CC /* MessagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCollectionViewController.swift; sourceTree = "<group>"; };
+		140BB55623515016000738CC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		140BB55823515163000738CC /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		141B18CB23508A2800025D0F /* ex00.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ex00.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		141B18CE23508A2800025D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		141B18D023508A2900025D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		141B18D323508A2900025D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		141B18D523508A2A00025D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		141B18D823508A2A00025D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,8 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				141B18CE23508A2800025D0F /* AppDelegate.swift */,
-				141B18D023508A2900025D0F /* ViewController.swift */,
+				140BB55823515163000738CC /* MessageCollectionViewCell.swift */,
+				140BB54E23514AD2000738CC /* MessagesCollectionViewController.swift */,
 				141B18D223508A2900025D0F /* Main.storyboard */,
+				140BB55623515016000738CC /* Message.swift */,
 				141B18D523508A2A00025D0F /* Assets.xcassets */,
 				141B18D723508A2A00025D0F /* LaunchScreen.storyboard */,
 				141B18DA23508A2A00025D0F /* Info.plist */,
@@ -88,7 +94,6 @@
 				1EF309381E2D525B18C9F60E /* Pods-ex00.debug.xcconfig */,
 				A3BD16FC20D32412EE5D9C0A /* Pods-ex00.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,15 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ex00-checkManifestLockResult.txt",
 			);
@@ -208,7 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				141B18D123508A2900025D0F /* ViewController.swift in Sources */,
+				140BB54F23514AD2000738CC /* MessagesCollectionViewController.swift in Sources */,
+				140BB55923515163000738CC /* MessageCollectionViewCell.swift in Sources */,
+				140BB55723515016000738CC /* Message.swift in Sources */,
 				141B18CF23508A2800025D0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
