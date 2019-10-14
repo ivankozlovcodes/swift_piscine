@@ -9,6 +9,7 @@
 import UIKit
 
 class MessageCollectionViewCell : UICollectionViewCell {
+    @IBOutlet var userNameLabel: UILabel!
     @IBOutlet var textLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
 }

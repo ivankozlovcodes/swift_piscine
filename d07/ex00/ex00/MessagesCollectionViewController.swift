@@ -14,6 +14,7 @@ private let reuseIdentifier = "Cell"
 
 class MessagesCollectionViewController: UIViewController, UICollectionViewDataSource {
 
+    var user: String = ""
     var messages: [Message] = []
     
     @IBOutlet var textInput: UITextField!
@@ -58,11 +59,19 @@ class MessagesCollectionViewController: UIViewController, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MessageCollectionViewCell
         
-        //        cell.imageView.image = UIImage(named: "cat_\(indexPath.row%10)")
-        cell.backgroundColor = UIColor.blue
+//        cell.backgroundColor = UIColor.blue
         let message = messages[indexPath.row]
+
+        cell.textLabel.textAlignment = message.user == user ? .right : .left
+        cell.statusLabel.textAlignment = message.user == user ? .right : .left
+        cell.userNameLabel.textAlignment = message.user == user ? .right : .left
+
         cell.textLabel.text = message.text
-        cell.statusLabel.text = message.sending ? "sending..." : "sent"
+        cell.statusLabel.text = ""
+        if message.user == user {
+            cell.statusLabel.text = message.sending ? "sending..." : "sent"
+        }
+        cell.userNameLabel.text = message.user
         
         return cell
     }
@@ -74,27 +83,12 @@ class MessagesCollectionViewController: UIViewController, UICollectionViewDataSo
         
         let message = index != nil ? messages[index!] : Message()
         message.id = id
-        message.text = data["text"] as! String
+        message.text = data["text"] as? String ?? ""
+        message.user = data["user"] as? String ?? ""
         message.sending = false
         if index == nil {
             messages.append(message)
         }
-    }
-    
-    func updateMessages(snapshot: NSDictionary) {
-        snapshot.forEach({ (key, value) in
-            print(value)
-            if let data = value as? NSDictionary {
-                let message = Message()
-                message.text = data["text"] as! String
-                self.messages.append(message)
-            }
-        })
-        self.messagesView.reloadData()
-    }
-    
-    func addNewMessage(data: NSDictionary) {
-        
     }
 
     @IBAction func sendMessage(_ sender: Any) {
@@ -103,12 +97,14 @@ class MessagesCollectionViewController: UIViewController, UICollectionViewDataSo
         if let text = textInput.text {
             guard let key = ref.child("messages").childByAutoId().key else { return }
             message.id = key
+            message.user = user
             message.text = text;
             message.sending = true
+
             messages.append(message)
             messagesView.reloadData()
             
-            let message = ["text": text]
+            let message = ["text": text, "user": user]
             let childUpdates = ["/messages/\(key)": message]
             ref.updateChildValues(childUpdates)
             

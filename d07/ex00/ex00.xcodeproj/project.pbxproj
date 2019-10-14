@@ -16,6 +16,7 @@
 		141B18D623508A2A00025D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 141B18D523508A2A00025D0F /* Assets.xcassets */; };
 		141B18D923508A2A00025D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141B18D723508A2A00025D0F /* LaunchScreen.storyboard */; };
 		141B18E123508AD300025D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 141B18E023508AD300025D0F /* GoogleService-Info.plist */; };
+		143E72EF235239520052DEDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143E72EE235239520052DEDC /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		141B18D823508A2A00025D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		141B18DA23508A2A00025D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		141B18E023508AD300025D0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		143E72EE235239520052DEDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1EF309381E2D525B18C9F60E /* Pods-ex00.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex00.debug.xcconfig"; path = "Target Support Files/Pods-ex00/Pods-ex00.debug.xcconfig"; sourceTree = "<group>"; };
 		A3BD16FC20D32412EE5D9C0A /* Pods-ex00.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex00.release.xcconfig"; path = "Target Support Files/Pods-ex00/Pods-ex00.release.xcconfig"; sourceTree = "<group>"; };
 		E83D9055F6BE5039F4D31943 /* Pods_ex00.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ex00.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				141B18CE23508A2800025D0F /* AppDelegate.swift */,
+				143E72EE235239520052DEDC /* LoginViewController.swift */,
 				140BB55823515163000738CC /* MessageCollectionViewCell.swift */,
 				140BB54E23514AD2000738CC /* MessagesCollectionViewController.swift */,
 				141B18D223508A2900025D0F /* Main.storyboard */,
@@ -172,13 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ex00/Pods-ex00-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ex00/Pods-ex00-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ex00/Pods-ex00-frameworks.sh\"\n";
@@ -212,6 +209,7 @@
 				140BB54F23514AD2000738CC /* MessagesCollectionViewController.swift in Sources */,
 				140BB55923515163000738CC /* MessageCollectionViewCell.swift in Sources */,
 				140BB55723515016000738CC /* Message.swift in Sources */,
+				143E72EF235239520052DEDC /* LoginViewController.swift in Sources */,
 				141B18CF23508A2800025D0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
