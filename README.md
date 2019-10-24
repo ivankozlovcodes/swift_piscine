@@ -36,13 +36,24 @@ For more detailed description refer to projects [pdfs][pdfs]
 
 ## Credits
 
-Special thanks to [@michaelbrave][mike] for making this whole thing happend.
+Special thanks to [@michaelbrave][mike] for making this whole thing happen. Check out his updated [pdf repo][mikespdfs] compiled with LaTeX.
 
 ## 42 Folks
 
 **If you are 42 student and stumble upon this, please, read this disclaimer.**
 
+You are welcome to check it out and reference code I wrote here in your work.
+I am glad you found it useful. Just keep in mind that
+Codebase is not up to date nor it will nessesary work on school machines today.
+
+And most importanly - 
+**Please, do not copy code from here without thinking/understanding.**
+
+Thanks!
+
+
 [42]: http://42.us.org "42 USA"
 [pdfs]: https://github.com/IvanKozlov95/swift_piscine/tree/master/resources "Pdfs"
 [piscine]: https://en.wikipedia.org/wiki/Piscine "Piscine"
 [mike]: https://github.com/michaelbrave "Mike"
+[mikespdfs]: https://github.com/michaelbrave/Swift-Piscine-Curriculim-at-42 "Updated pdfs"
